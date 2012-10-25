@@ -99,6 +99,10 @@ body, html {
 	padding:0;
 }	
 
+a:hover {
+	color:white;
+}
+
 /* ==== TEXT STYLES ===== */ 
 h1 {
 	margin:20px;
@@ -151,6 +155,7 @@ span.anne {
 /* ==== THUMBNAIL LIST ===== */
 
 ul {
+	display:block;
 	padding:0;
 }
 
