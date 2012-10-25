@@ -92,73 +92,111 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-h1 {
+body, html {
 	font-family: 'Dosis', sans-serif;
 	font-weight:normal;
-	font-size:2.5em;
-	margin:20px 10px;
+	margin:0;
 	padding:0;
+}	
+
+/* ==== TEXT STYLES ===== */ 
+h1 {
+	margin:20px;
+	font-size:3.0em;
+	font-weight:normal;
+}
+
+h2.thumb_caption {
+	display: table-cell; 
+	vertical-align: middle; 
+	text-align: center;
+	
+	color:#fff;
+	font-size:70px;
+	font-weight:800;
+	line-height:0.9;
+	text-align:center;
+	z-index:999;
 }
 
 span.anne {
 	color:#f63;
 }
 
+/* ==== PAGE CONTAINERS ===== */ 
+
 #page_container {
 	display:block;
-	position:fixed;
-	width:100%;
-	height:100%;
-	margin:0;
+	width:80%;
+	height:auto;
+	margin:0 auto;
+	padding:0;
 	background:#fff;
-	overflow-x:none;
-	overflow-y:scroll;
+	overflow-y:hidden;
+	
+/*	background:#333;*/
 }
 
-#photo_holder {
+#img_bg {
 	display:none;
 	position:fixed;
 	top:0;
 	left:0;
 	width:100%;
 	height:100%;
-	background:#000;
-	opacity:0.8;
+	background:#fff;
+	opacity:0.90;
 }
 
-#thumb_list {
-	list-style-type:none;
-	margin:0;
+/* ==== THUMBNAIL LIST ===== */
+
+ul {
 	padding:0;
 }
 
+ul #thumb_list {
+	margin:0;
+}
+
 #thumb_list li {
+	display:block;
 	position:relative;
-	width:25%;
-	height:200px;
-	background:#fff;
-	opacity:0.4;
+	
+	list-style-type:none;
+	margin:13px;
+	padding:0;
+	width:300px;
+	height:300px;
+	overflow:hidden;
+	border:10px solid white;
 	float:left;
-	border:none;
+	
+	-moz-box-shadow:    2px 2px 8px 6px #ccc;
+	-webkit-box-shadow: 2px 2px 8px 6px #ccc;
+	box-shadow:         2px 2px 8px 6px #ccc;
+}
+#thumb_list li:hover .img_thumb {
+	opacity:0.7;
 }
 
-#thumb_list li:hover {
-	outline:5px solid #f63;
-/*	margin:-15px;*/
-	
-}
-
-#thumb_list li:hover .thumb_holder {
-	
+#thumb_list li:hover .cap_holder {
+	top:0;
 	opacity:1;
 }
 
+#thumb_list li:hover .thumb_border {
+	top:0;
+	opacity:1;
+}
+
+
 .img_thumb {
-	width:100%;
-	height:100%;
+	position:relative;
+	left:-50%;
+	top:-50%;
+	width:200%;
+	height:200%;
 	overflow:hidden;
-	float:left;
 }
 
 .img_thumb img {
@@ -166,13 +204,24 @@ span.anne {
 	height:100%;
 }
 
-.thumb_holder {
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
+.cap_holder {
+	position: absolute; 
+	left: 0; 
+	top: -300; 
+	width: 300px; 
+	height: 300px; 
+	display: table;
 }
+
+.thumb_border {
+	position:absolute;
+	left: 0; 
+	top: -400px; 
+	width: 260px; 
+	height: 260px;
+	border:20px solid #fff;
+}
+
 
 
 
