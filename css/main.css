@@ -115,8 +115,10 @@ h2.thumb_caption {
 	vertical-align: middle; 
 	text-align: center;
 	
+	padding:0 30px;
+	
 	color:#fff;
-	font-size:70px;
+	font-size:55px;
 	font-weight:800;
 	line-height:0.9;
 	text-align:center;
@@ -191,17 +193,22 @@ ul #thumb_list {
 
 #thumb_list li:hover .thumb_border {
 	top:0;
-	opacity:1;
+	left:0;
+	width: 260px; 
+	height: 260px;;
 }
 
 
 .img_thumb {
 	position:relative;
-	left:-50%;
-	top:-50%;
-	width:200%;
-	height:200%;
+	width:100%;
+	height:100%;
 	overflow:hidden;
+	
+	transition: opacity 1s;
+    -moz-transition: opacity 1s; 
+    -webkit-transition: opacity 1s; 
+    -o-transition: opacity 1s; 
 }
 
 .img_thumb img {
@@ -212,19 +219,32 @@ ul #thumb_list {
 .cap_holder {
 	position: absolute; 
 	left: 0; 
-	top: -300; 
+	top: 0; 
 	width: 300px; 
 	height: 300px; 
 	display: table;
+	opacity:0;
+	
+	transition: opacity 1s;
+    -moz-transition: opacity 1s; 
+    -webkit-transition: opacity 1s; 
+    -o-transition: opacity 1s; 
 }
 
 .thumb_border {
 	position:absolute;
-	left: 0; 
-	top: -400px; 
+	left: -20px; 
+	top: -20px; 
 	width: 260px; 
 	height: 260px;
+	width:300px;
+	height:300px;
 	border:20px solid #fff;
+	
+    transition: left 0.2s, top, 0.2s, width 0.2s, height 0.2s;
+    -moz-transition: left 0.2s, top, 0.2s, width 0.2s, height 0.2s;
+    -webkit-transition: left 0.2s, top, 0.2s, width 0.2s, height 0.2s;
+    -o-transition: left 0.2s, top, 0.2s, width 0.2s, height 0.2s;
 }
 
 
